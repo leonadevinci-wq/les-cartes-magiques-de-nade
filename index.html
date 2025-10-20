@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartes magiques de Nade</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      background: #faf8f5;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .video-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      margin-bottom: 2rem;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Bouton Lecture central */
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      font-size: 2.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .play-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    /* Bouton Suivant */
+    .btn-next {
+      display: inline-block;
+      background-color: #222;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-next:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎴 Cartes magiques de Nade</h1>
+
+  <div class="video-container">
+    <video id="video" preload="auto" playsinline controls>
+      <source src="cartes magiques de Nade 3.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la lecture vidéo.
+    </video>
+
+    <!-- Bouton lecture au centre -->
+    <button id="playButton" class="play-button">▶️</button>
+  </div>
+
+  <!-- Bouton suivant -->
+  <a href="page2.html" class="btn-next">Suivant ➜</a>
+
+  <script>
+    const video = document.getElementById('video');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+      video.play();
+      video.muted = false; // active le son
+      playButton.style.display = 'none'; // cache le bouton après lecture
+    });
+
+    // Si l’utilisateur met en pause, on réaffiche le bouton lecture
+    video.addEventListener('pause', () => {
+      playButton.style.display = 'block';
+    });
+
+    video.addEventListener('play', () => {
+      playButton.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choisis ta carte</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #faf8f5;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 1rem;
+      width: min(700px, 90vw);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #222;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #444;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>🃏 Clique sur le numéro de la carte que tu as tirée</h1>
+
+  <div class="grid">
+    <!-- Génération manuelle des boutons de 1 à 32 -->
+    <a href="carte1.html" class="btn">1</a>
+    <a href="carte2.html" class="btn">2</a>
+    <a href="carte3.html" class="btn">3</a>
+    <a href="carte4.html" class="btn">4</a>
+    <a href="carte5.html" class="btn">5</a>
+    <a href="carte6.html" class="btn">6</a>
+    <a href="carte7.html" class="btn">7</a>
+    <a href="carte8.html" class="btn">8</a>
+    <a href="carte9.html" class="btn">9</a>
+    <a href="carte10.html" class="btn">10</a>
+    <a href="carte11.html" class="btn">11</a>
+    <a href="carte12.html" class="btn">12</a>
+    <a href="carte13.html" class="btn">13</a>
+    <a href="carte14.html" class="btn">14</a>
+    <a href="carte15.html" class="btn">15</a>
+    <a href="carte16.html" class="btn">16</a>
+    <a href="carte17.html" class="btn">17</a>
+    <a href="carte18.html" class="btn">18</a>
+    <a href="carte19.html" class="btn">19</a>
+    <a href="carte20.html" class="btn">20</a>
+    <a href="carte21.html" class="btn">21</a>
+    <a href="carte22.html" class="btn">22</a>
+    <a href="carte23.html" class="btn">23</a>
+    <a href="carte24.html" class="btn">24</a>
+    <a href="carte25.html" class="btn">25</a>
+    <a href="carte26.html" class="btn">26</a>
+    <a href="carte27.html" class="btn">27</a>
+    <a href="carte28.html" class="btn">28</a>
+    <a href="carte29.html" class="btn">29</a>
+    <a href="carte30.html" class="btn">30</a>
+    <a href="carte31.html" class="btn">31</a>
+    <a href="carte32.html" class="btn">32</a>
+  </div>
+
+  <footer>
+    © Cartes magiques de Nade
+  </footer>
+</body>
+</html>
